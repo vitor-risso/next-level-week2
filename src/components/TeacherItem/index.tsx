@@ -29,9 +29,10 @@ function TeacherItem(){
                  <img src={whatsappIcon} alt="zapzap"/>
                  Entrar em contato
             </button>
-           
+
         </footer>
     </article>
+    
     )
 }
 
