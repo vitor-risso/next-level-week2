@@ -18,7 +18,7 @@ function TeacherItem(){
         <p>
             Entusiasta apaixonado pelas materias de física avançada.
             <br /> <br />
-            Apaixonado por cinética e arremeçar objetos, principalmente em lugares perigosos, conhecido por mudar a vida das pessoas também. Mas de 200.000 pessoas ja passaram por algum perrengue com ele.
+            Apaixonado por cinética e arremeçar objetos, principalmente em lugares perigosos, conhecido por mudar a vida das pessoas também. Mais de 200.000 pessoas ja passaram por algum perrengue com ele.
         </p>
 
         <footer>
