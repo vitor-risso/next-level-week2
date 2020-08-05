@@ -9,7 +9,10 @@ function TeacherForm (){
         <div id="page-teacher-form" className="container">
         <PageHeader 
          title="Que incrível que você quer dar aula"
-/>
+         description = "O primeiro passo é preecnher esse fomulário de inscrição"
+         
+        />        
+
      </div>
     )
 }
