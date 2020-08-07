@@ -32,7 +32,7 @@
         grid-template-columns: repeat(3, 1fr);
         column-gap: 16px;
         position: absolute;
-        bottom: -55px;
+        bottom: -25px;
     }
 
     #search-teachers .input-block + .input-block ,
