@@ -3,32 +3,57 @@ import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
 
 
 import './styles.css'
+import api from '../../services/api';
+
+export interface Teacher {
+        id: number;
+        avatar: string;
+        bio: string;
+        cost: number;
+        name: string;
+        subject: string;
+        whatsapp: string;
+
+}
+
+
+interface TeacherItemProps {
+    teacher: Teacher
+}
 
 
 
-function TeacherItem(){
+const TeacherItem: React.FC<TeacherItemProps> = ({teacher}) => {
+
+
+    function crateNewConnection(){
+        api.post('connections',{
+            user_id: teacher.id,
+        })
+    }
     return(
         <article className="teacher-item">
         <header>
-            <img src="https://avatars3.githubusercontent.com/u/65199345?s=460&u=b46247b3fe54ba2be0ac02be956bcb85cea9126e&v=4" alt="Vitor Risso"/>
+            <img src={teacher.avatar} alt={teacher.name}/>
             <div>
-                <span>Física</span>
+                <strong>{teacher.name}</strong>
+                <span>{teacher.subject}</span>
             </div>
         </header>
         <p>
-            Entusiasta apaixonado pelas materias de física avançada.
-            <br /> <br />
-            Apaixonado por cinética e arremeçar objetos, principalmente em lugares perigosos, conhecido por mudar a vida das pessoas também. Mais de 200.000 pessoas ja passaram por algum perrengue com ele.
+            { teacher.bio}
         </p>
 
         <footer>
             <p>Preço/hora
-            <strong>R$ 85,00</strong>
+            <strong>R$ { teacher.cost }</strong>
             </p>
-            <button type="button">
+            <a target="_blank" onClick={crateNewConnection} href={`https://wa.me/${teacher.whatsapp}`}>
                  <img src={whatsappIcon} alt="zapzap"/>
                  Entrar em contato
-            </button>
+
+            </a>
+           
 
         </footer>
     </article>
