@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
+
 import logoImg from '../../assets/images/logo.svg'
 import landingImg from '../../assets/images/landing.svg'
 
@@ -13,7 +14,6 @@ import './styles.css';
 
 
 function Landing() {
-
   const [totalConnections, setTotalConnections] =useState(0);
 
   useEffect(()=>{

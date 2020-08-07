@@ -1,4 +1,5 @@
 import React, { useState, FormEvent } from 'react';
+import { useHistory } from 'react-router-dom'
 import PageHeader from '../../components/PageHeader';
 import Input from '../../components/Input';
 
@@ -13,6 +14,8 @@ import api from '../../services/api';
 
 
 function TeacherForm (){
+    const history = useHistory();
+
 
     const [name, setName] = useState('');
     const [avatar, setAvatar] = useState('');
@@ -52,7 +55,8 @@ function TeacherForm (){
             cost: Number(cost),
             schedule: ScheduleItems
         }).then(()=>{
-            alert(`Cdastro realizado com sucesso!`)
+            alert(`Cadastro realizado com sucesso!`)
+            history.push('/')
         }).catch(()=>{
             alert(`Erro no cadastro`)
         })
@@ -126,8 +130,8 @@ function TeacherForm (){
                         {value: 'Física' , label: 'Física'},
                         {value: 'Química' , label: 'Química'},
                         {value: 'Matemática' , label: 'Matemática'},
-                        {value: 'Potuguês' , label: 'Potuguês'},
-                        {value: 'Hitória' , label: 'Hitória'},
+                        {value: 'Português' , label: 'Português'},
+                        {value: 'História' , label: 'História'},
                         {value: 'Geografia' , label: 'Geografia'},
                     ]}
                     /> 
